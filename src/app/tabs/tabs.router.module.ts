@@ -8,11 +8,11 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'contacts',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../contacts/contacts.module#ContactsPageModule'
           }
         ]
       },
@@ -36,14 +36,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/contacts',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/contacts',
     pathMatch: 'full'
   }
 ];

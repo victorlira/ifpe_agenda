@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Contatos</ion-title>
+        <ion-buttons slot="start">
+            <ion-button (click)="back()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="secondary">
+            <ion-button (click)="save()">
+                SALVAR
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Digite os dados do novo contato</p>
+
+    <ion-grid>
+        <ion-row>
+            <mat-form-field>
+                <input [(ngModel)]="newContact.name" matInput placeholder="Nome do contato">
+            </mat-form-field>
+        </ion-row>
+
+        <ion-row>
+            <mat-form-field>
+                <input [(ngModel)]="newContact.phone" matInput placeholder="Telefone do contato">
+            </mat-form-field>
+        </ion-row>
+    </ion-grid>
+</ion-content>

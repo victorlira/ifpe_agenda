@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contatos</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="add()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let contact of contacts | async">
+    <ion-item>
+      <ion-icon (click)="remove(contact)" color="danger" name="trash" slot="end"></ion-icon>
+      <ion-label>{{ contact.name }}</ion-label>
+    </ion-item>
+  
+    <ion-card-content>
+      {{ contact.phone }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
