@@ -1,0 +1,20 @@
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <img src="../../assets/images/ifpe.png" alt="">
+    </ion-row>
+    <ion-row>
+      <ion-input [(ngModel)]="email" placeholder="Digite o seu e-mail"></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-input [(ngModel)]="password" placeholder="Digite a sua senha"></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-button (click)="login()">ENTRAR</ion-button>
+    </ion-row>
+    <ion-row>
+      <ion-label (click)="register()">Não tem uma conta? Cadastre-se agora</ion-label>
+    </ion-row>
+  </ion-grid>
+</ion-content>

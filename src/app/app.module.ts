@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,7 +30,8 @@ import { AngularFireDatabase } from '@angular/fire/database';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AngularFireDatabase
+    AngularFireDatabase,
+    AngularFireAuth
   ],
   bootstrap: [AppComponent]
 })

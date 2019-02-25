@@ -1,0 +1,17 @@
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-label (click)="backToLogin()">Voltar</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-input [(ngModel)]="email" placeholder="Digite o seu e-mail"></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-input [(ngModel)]="password" placeholder="Digite a sua senha"></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-button (click)="register()">CADASTRAR</ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
