@@ -8,6 +8,8 @@ import { ContactsPage } from './contacts.page';
 import {MatInputModule} from '@angular/material/input';
 import { NewContactPage } from '../new-contact/new-contact.page';
 
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   imports: [
@@ -15,7 +17,8 @@ import { NewContactPage } from '../new-contact/new-contact.page';
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: ContactsPage }]),
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   declarations: [ContactsPage, NewContactPage],
   entryComponents: [NewContactPage]

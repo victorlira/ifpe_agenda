@@ -10,14 +10,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let contact of contacts | async">
-    <ion-item>
-      <ion-icon (click)="remove(contact)" color="danger" name="trash" slot="end"></ion-icon>
-      <ion-label>{{ contact.name }}</ion-label>
-    </ion-item>
-  
-    <ion-card-content>
-      {{ contact.phone }}
-    </ion-card-content>
-  </ion-card>
+  <div *ngIf="!loading">
+    <ion-card *ngFor="let contact of contacts">
+      <ion-item>
+        <ion-icon (click)="edit(contact)" color="blue" name="create" slot="end"></ion-icon>
+        <ion-icon (click)="remove(contact.uid)" color="danger" name="trash" slot="end"></ion-icon>
+        <ion-label>{{ contact.name }}</ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+        {{ contact.phone }}, Natural de: {{ contact.addressText }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="loading">
+    <p>Aguarde...</p>
+  </div>
 </ion-content>

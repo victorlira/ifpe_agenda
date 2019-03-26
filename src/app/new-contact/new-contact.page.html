@@ -29,5 +29,16 @@
                 <input [(ngModel)]="newContact.phone" matInput placeholder="Telefone do contato">
             </mat-form-field>
         </ion-row>
+
+        <ion-row>
+                <mat-form-field>
+                <mat-label>Naturalidade</mat-label>
+                <mat-select [(ngModel)]="newContact.addressUID">
+                    <mat-option *ngFor="let address of addressList" [value]="address.uid">
+                    {{ address.city }} / {{ address.state }}
+                    </mat-option>
+                </mat-select>
+                </mat-form-field>
+        </ion-row>
     </ion-grid>
 </ion-content>
