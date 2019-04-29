@@ -19,6 +19,12 @@
 
     <ion-grid>
         <ion-row>
+            <div class="upload-container">
+                <ion-icon *ngIf="!newContact.picture" (click)="takePhoto()" class="upload-icon" name="contact"></ion-icon>
+                <ion-img *ngIf="newContact.picture" [src]="newContact.picture"></ion-img>
+            </div>
+        </ion-row>
+        <ion-row>
             <mat-form-field>
                 <input [(ngModel)]="newContact.name" matInput placeholder="Nome do contato">
             </mat-form-field>

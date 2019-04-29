@@ -13,6 +13,7 @@
   <div *ngIf="!loading">
     <ion-card *ngFor="let contact of contacts">
       <ion-item>
+        <ion-img slot="start" *ngIf="contact.picture" [src]="contact.picture"></ion-img>
         <ion-icon (click)="edit(contact)" color="blue" name="create" slot="end"></ion-icon>
         <ion-icon (click)="remove(contact.uid)" color="danger" name="trash" slot="end"></ion-icon>
         <ion-label>{{ contact.name }}</ion-label>

@@ -1,3 +1,21 @@
 mat-form-field {
     width: 100%;
 }
+
+.upload-container {
+    width: 100%;
+    text-align: center;
+
+    .upload-icon {
+        font-size: 132px;
+        color: #777;
+    }
+}
+
+ion-img {
+    height: 132px;
+    width: 132px;
+    border: 1px solid green;
+    border-radius: 100px;
+    padding: 14px;
+}
